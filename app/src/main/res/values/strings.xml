@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Prova1</string>
+    <string name="aluno">Aluno: Jean Carlos</string>
+    <string name="inserir_fazenda">Inserir Fazenda</string>
+    <string name="nome">Nome</string>
+    <string name="cnpj">CNPJ</string>
+    <string name="car">CAR</string>
+    <string name="caixa">Caixa</string>
+    <string name="home">Home</string>
+    <string-array name="opcoes_exec">
+        <item>Inserir Fazenda</item>
+        <item>Alterar Fazenda</item>
+        <item>Remover Fazenda</item>
+        <item>Mostrar Fazendas</item>
+    </string-array>
+    <string-array name="opcoes_fazenda">
+        <item>Porcos</item>
+        <item>Vacas leiteiras</item>
+        <item>Lavoura de soja</item>
+    </string-array>
 </resources>

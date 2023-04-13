@@ -1,6 +1,8 @@
 package com.example.prova1
 
-open class Fazenda(nome: String, cnpj: String, car : String, caixa: Double) {
+import java.io.Serializable
+
+open class Fazenda(nome: String, cnpj: String, car : String, caixa: Double) : Serializable {
 
     val nome : String
     val cnpj : String

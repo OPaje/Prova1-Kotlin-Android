@@ -10,14 +10,36 @@
         android:id="@+id/titulo_tela_principal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aluno: Jean Carlos"
+        android:text="@string/aluno"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lv_opcoes_exerc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ListView
+        android:id="@+id/lv_opcoes_exerc"
+        android:layout_width="375dp"
+        android:layout_height="365dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_respostas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_tela_principal"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/et_respostas"
+        android:layout_width="202dp"
+        android:layout_height="87dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_opcoes_exerc"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
