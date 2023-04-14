@@ -12,6 +12,7 @@
         <item>Alterar Fazenda</item>
         <item>Remover Fazenda</item>
         <item>Mostrar Fazendas</item>
+        <item>Valor total em caixa</item>
     </string-array>
     <string-array name="opcoes_fazenda">
         <item>Porcos</item>

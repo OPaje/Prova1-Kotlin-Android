@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
@@ -38,6 +39,13 @@ class TelaPrincipal : AppCompatActivity() {
                                 listaFazenda.add(fazenda)
                             }
                         }
+                        if (it.hasExtra("444")) {
+                            val fazenda : Fazenda? = it.getSerializableExtra("444", Fazenda::class.java)
+                            if (fazenda != null) {
+                                val indice = listaFazenda.indexOfFirst { fazenda.cnpj == it.cnpj }
+                                listaFazenda[indice] = fazenda
+                            }
+                        }
                     }
                 }
             }
@@ -47,9 +55,16 @@ class TelaPrincipal : AppCompatActivity() {
             "Mostrar Fazendas" to {startActivity(Intent(applicationContext, TelaMostrar::class.java).let {
                 it.putExtra("111", mostrarFazendasList())
             })},
+
             "Alterar Fazenda" to {register.launch(Intent(applicationContext, TelaAtualizar::class.java).let {
                 it.putStringArrayListExtra("111", arrayListOf<String>(mostrarFazendas()))
-            })}
+            })},
+
+            "Valor total em caixa" to {
+                val totalCaixa = listaFazenda.sumOf { it.caixa }
+                Toast.makeText(applicationContext, "Total Caixa: $totalCaixa", Toast.LENGTH_LONG).show()
+            }
+
         )
 
         binding.lvOpcoesExerc.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->

@@ -4,10 +4,10 @@ import java.io.Serializable
 
 open class Fazenda(nome: String, cnpj: String, car : String, caixa: Double) : Serializable {
 
-    val nome : String
+    var nome : String
     val cnpj : String
     val car : String
-    val caixa : Double
+    var caixa : Double
 
     init {
         this.nome = nome

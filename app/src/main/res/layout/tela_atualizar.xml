@@ -13,26 +13,12 @@
         android:text="Atualizar Fazenda"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="45dp" />
-
-    <EditText
-        android:id="@+id/et_cnpj_atualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/cnpj"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="113dp" />
-
-    <Button
-        android:id="@+id/btn_buscar_atualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buscar"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="199dp" />
+        app:layout_constraintBottom_toTopOf="@+id/et_cnpj_atualiza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <EditText
         android:id="@+id/et_nome_atualiza"
@@ -41,8 +27,12 @@
         android:ems="10"
         android:hint="@string/nome"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="290dp" />
+        app:layout_constraintBottom_toTopOf="@+id/et_caixa_atualiza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_buscar_atualiza"
+        app:layout_constraintVertical_bias="0.5" />
 
     <EditText
         android:id="@+id/et_caixa_atualiza"
@@ -51,22 +41,61 @@
         android:ems="10"
         android:hint="@string/caixa"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="372dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_atualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome_atualiza"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/btn_atualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Atualizar"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="483dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_home_atualiza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_caixa_atualiza"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/btn_home_atualiza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/home"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="651dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_atualizar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_cnpj_atualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/cnpj"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_buscar_atualiza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_tela_atualizar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_buscar_atualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        app:layout_constraintBottom_toTopOf="@+id/et_nome_atualiza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cnpj_atualiza"
+        app:layout_constraintVertical_bias="0.5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
