@@ -7,4 +7,10 @@ class LavouraDeSoja(presencaSilo : Boolean, nome: String, cnpj : String, car: St
     init {
         this.presencaSilo = presencaSilo
     }
+
+    override fun toString(): String {
+        return "presenca Silo = $presencaSilo"
+    }
+
+
 }

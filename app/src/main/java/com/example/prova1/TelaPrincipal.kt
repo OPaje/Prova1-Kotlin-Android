@@ -45,6 +45,9 @@ class TelaPrincipal : AppCompatActivity() {
         val opcoes = hashMapOf(
             "Inserir Fazenda" to {register.launch(Intent(applicationContext, TelaInserir::class.java))},
             "Mostrar Fazendas" to {startActivity(Intent(applicationContext, TelaMostrar::class.java).let {
+                it.putExtra("111", mostrarFazendasList())
+            })},
+            "Alterar Fazenda" to {register.launch(Intent(applicationContext, TelaAtualizar::class.java).let {
                 it.putStringArrayListExtra("111", arrayListOf<String>(mostrarFazendas()))
             })}
         )
@@ -55,6 +58,9 @@ class TelaPrincipal : AppCompatActivity() {
         }
     }
 
+    fun mostrarFazendasList() : ArrayList<Fazenda>{
+        return listaFazenda as ArrayList<Fazenda>
+    }
     fun mostrarFazendas() : String{
         return listaFazenda.toString()
     }

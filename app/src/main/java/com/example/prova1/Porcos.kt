@@ -7,4 +7,10 @@ class Porcos(kgBaconEstoque : Double, nome: String, cnpj : String, car: String, 
     init {
         this.kgBaconEstoque = kgBaconEstoque
     }
+
+    override fun toString(): String {
+        return "kg Bacon Estoque = $kgBaconEstoque"
+    }
+
+
 }

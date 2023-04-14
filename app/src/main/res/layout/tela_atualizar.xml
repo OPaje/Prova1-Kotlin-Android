@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaAtualizar">
+
+    <TextView
+        android:id="@+id/titulo_tela_atualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar Fazenda"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <EditText
+        android:id="@+id/et_cnpj_atualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/cnpj"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+    <Button
+        android:id="@+id/btn_buscar_atualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <EditText
+        android:id="@+id/et_nome_atualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="97dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <EditText
+        android:id="@+id/et_caixa_atualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/caixa"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <Button
+        android:id="@+id/btn_atualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="483dp" />
+
+    <Button
+        android:id="@+id/btn_home_atualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="651dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

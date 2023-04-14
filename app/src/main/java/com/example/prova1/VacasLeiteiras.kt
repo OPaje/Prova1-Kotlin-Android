@@ -7,4 +7,10 @@ class VacasLeiteiras(producaoDiaria: Double, nome: String, cnpj : String, car: S
     init{
         this.producaoDiaria = producaoDiaria
     }
+
+    override fun toString(): String {
+        return "producao Diaria = $producaoDiaria"
+    }
+
+
 }

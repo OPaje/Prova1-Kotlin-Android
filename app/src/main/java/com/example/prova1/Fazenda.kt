@@ -15,4 +15,10 @@ open class Fazenda(nome: String, cnpj: String, car : String, caixa: Double) : Se
         this.car = car
         this.caixa = caixa
     }
+
+    override fun toString(): String {
+        return "Nome = $nome Cnpj = $cnpj Car = $car Caixa = $caixa"
+    }
+
+
 }
