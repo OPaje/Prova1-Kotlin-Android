@@ -14,17 +14,17 @@ import com.example.prova1.databinding.TelaMostrarBinding
 class TelaAtualizar : AppCompatActivity() {
 
     lateinit var binding: TelaAtualizarBinding
-
+    lateinit var lista : ArrayList<Fazenda>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = TelaAtualizarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val lista = intent.getSerializableExtra("111") as ArrayList<Fazenda>
+        lista = intent.getSerializableExtra("111") as ArrayList<Fazenda>
         var cod = 0
 
         binding.btnBuscarAtualiza.setOnClickListener {
-            val fazenda = lista.find { it.cnpj == binding.etCnpjAtualiza.text.toString() }
+            val fazenda = lista.find { it.cnpj == binding.etCnpjAtualiza.text.toString() } as Fazenda
             if (fazenda != null) {
                 cod = lista.indexOfFirst { it.cnpj == fazenda.cnpj }
             }
@@ -39,7 +39,7 @@ class TelaAtualizar : AppCompatActivity() {
                 setResult(RESULT_OK, this)
             }
 
-            Toast.makeText(applicationContext, "Curso Atualizado com Sucesso", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Fazenda Atualizada com Sucesso", Toast.LENGTH_SHORT).show()
 
         }
 

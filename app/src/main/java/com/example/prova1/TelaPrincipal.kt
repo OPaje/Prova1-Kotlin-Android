@@ -57,13 +57,17 @@ class TelaPrincipal : AppCompatActivity() {
             })},
 
             "Alterar Fazenda" to {register.launch(Intent(applicationContext, TelaAtualizar::class.java).let {
-                it.putStringArrayListExtra("111", arrayListOf<String>(mostrarFazendas()))
+                it.putExtra("111", mostrarFazendasList())
             })},
 
             "Valor total em caixa" to {
                 val totalCaixa = listaFazenda.sumOf { it.caixa }
                 Toast.makeText(applicationContext, "Total Caixa: $totalCaixa", Toast.LENGTH_LONG).show()
-            }
+            },
+
+            "Remover Fazenda" to {register.launch(Intent(applicationContext, TelaExcluir::class.java).let {
+                it.putExtra("111", mostrarFazendasList())
+            })}
 
         )
 
