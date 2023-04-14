@@ -16,19 +16,13 @@ class TelaMostrar : AppCompatActivity() {
         binding = TelaMostrarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        list = intent.getSerializableExtra("111") as ArrayList<Fazenda>
-
-        /*if(intent.hasExtra("111")){
+        if(intent.hasExtra("111")){
             val lista = intent.getStringArrayListExtra("111")
             if(lista != null){
                 val adapter = ArrayAdapter(this, R.layout.simple_list_item_1, lista)
                 binding.lvTelaMostrar.adapter = adapter
             }
         }
-*/
-
-        val adapter = ArrayAdapter(this, R.layout.simple_list_item_1, list)
-        binding.lvTelaMostrar.adapter = adapter
 
         binding.btnHomeTelaMostrar.setOnClickListener {
             finish()

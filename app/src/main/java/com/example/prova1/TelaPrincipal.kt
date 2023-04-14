@@ -60,7 +60,7 @@ class TelaPrincipal : AppCompatActivity() {
         val opcoes = hashMapOf(
             "Inserir Fazenda" to {register.launch(Intent(applicationContext, TelaInserir::class.java))},
             "Mostrar Fazendas" to {startActivity(Intent(applicationContext, TelaMostrar::class.java).let {
-                it.putExtra("111", mostrarFazendasList())
+                it.putStringArrayListExtra("111", arrayListOf<String>(mostrarFazendas()))
             })},
 
             "Alterar Fazenda" to {register.launch(Intent(applicationContext, TelaAtualizar::class.java).let {
