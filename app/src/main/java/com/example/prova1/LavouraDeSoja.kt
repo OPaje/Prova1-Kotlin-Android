@@ -9,7 +9,7 @@ class LavouraDeSoja(presencaSilo : Boolean, nome: String, cnpj : String, car: St
     }
 
     override fun toString(): String {
-        return "presenca Silo = $presencaSilo"
+        return "Nome = $nome Cnpj = $cnpj Car = $car Caixa = $caixa presenca Silo = $presencaSilo"
     }
 
 

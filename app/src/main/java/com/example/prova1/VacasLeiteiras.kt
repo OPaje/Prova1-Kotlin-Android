@@ -9,7 +9,7 @@ class VacasLeiteiras(producaoDiaria: Double, nome: String, cnpj : String, car: S
     }
 
     override fun toString(): String {
-        return "producao Diaria = $producaoDiaria"
+        return "Nome = $nome Cnpj = $cnpj Car = $car Caixa = $caixa producao Diaria = $producaoDiaria"
     }
 
 

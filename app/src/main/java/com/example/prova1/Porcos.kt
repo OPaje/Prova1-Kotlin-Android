@@ -9,7 +9,7 @@ class Porcos(kgBaconEstoque : Double, nome: String, cnpj : String, car: String, 
     }
 
     override fun toString(): String {
-        return "kg Bacon Estoque = $kgBaconEstoque"
+        return "Nome = $nome Cnpj = $cnpj Car = $car Caixa = $caixa kg Bacon Estoque = $kgBaconEstoque"
     }
 
 
