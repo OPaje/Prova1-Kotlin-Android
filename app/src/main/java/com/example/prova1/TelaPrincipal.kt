@@ -46,6 +46,13 @@ class TelaPrincipal : AppCompatActivity() {
                                 listaFazenda[indice] = fazenda
                             }
                         }
+                        if (it.hasExtra("888")) {
+                            val fazenda : Fazenda? = it.getSerializableExtra("888", Fazenda::class.java)
+                            if (fazenda != null) {
+                                val indice = listaFazenda.indexOfFirst {  fazenda.cnpj == it.cnpj }
+                                listaFazenda.removeAt(indice)
+                            }
+                        }
                     }
                 }
             }
